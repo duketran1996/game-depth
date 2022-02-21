@@ -34,9 +34,9 @@ func _physics_process(delta):
 		if is_hitting == false:
 			$AnimatedSprite.play("idle")
 	if is_on_floor():
-		if Input.is_action_pressed("jump") and is_hitting == false:
+		if Input.is_action_pressed("jump"):
 			velocity.y = - JUMPFORCE
-	if not is_on_floor(): 
+	if not is_on_floor() and is_hitting == false: 
 		if velocity.y < 0:
 			$AnimatedSprite.play("jump")
 	# Hit
