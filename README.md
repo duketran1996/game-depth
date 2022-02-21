@@ -1,1 +1,1 @@
-# game-depth
+# game-resources
