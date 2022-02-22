@@ -128,9 +128,9 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
-"loop": true,
+"loop": false,
 "name": "hit",
-"speed": 60.0
+"speed": 10.0
 } ]
 
 [node name="MagePlayer" type="KinematicBody2D"]
@@ -150,6 +150,5 @@ visible = false
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 8 )
 animation = "hit"
-frame = 1
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
