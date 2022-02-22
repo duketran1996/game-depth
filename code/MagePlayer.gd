@@ -3,12 +3,11 @@ extends KinematicBody2D
 
 var velocity = Vector2()
 const SPEED = 200
-const Gravity = 20
+var Gravity = 20
 const MAXFALLSPEED = 1000
-const JUMPFORCE = 1000
 var facing_right = true
-var is_hitting = false
 const bulletPath = preload("res://Asset/Scene/Bullet.tscn")
+var is_levitating = false
 
 func _physics_process(delta):
 	if facing_right == true:
@@ -16,44 +15,59 @@ func _physics_process(delta):
 	else:
 		$AnimatedSprite.scale.x = -1
 	
-	# Gravity part
-	velocity.y = velocity.y + Gravity
-	if velocity.y > MAXFALLSPEED:
-		velocity.y = MAXFALLSPEED
-	#Left and Right Movemwnt
-	if Input.is_action_pressed("right") and is_hitting == false:
-		facing_right = true
-		velocity.x = SPEED
-		$AnimatedSprite.play("run")
-	elif Input.is_action_pressed("left") and is_hitting == false:
-		facing_right = false
-		velocity.x = -SPEED
-		$AnimatedSprite.play("run")
+	if is_levitating == true:
+		Gravity = 0
+		$AnimatedSprite.play("jump")
+		if Input.is_action_pressed("up"):
+			velocity.y = -SPEED
+		elif Input.is_action_pressed("down"):
+			velocity.y = SPEED
+		else:
+			velocity.y =  lerp(velocity.y, 0, 0.2)
+		if Input.is_action_pressed("right"):
+			facing_right = true
+			velocity.x = SPEED
+		elif Input.is_action_pressed("left"):
+			facing_right = false
+			velocity.x = -SPEED
+		else:
+			velocity.x =  lerp(velocity.x, 0, 0.2)
+		
 	else:
-		# Implement resistance force an player's movement. (So not move ifinitely)
-		velocity.x =  lerp(velocity.x, 0, 0.2)
-		if is_hitting == false:
+		$AnimatedSprite.play("idle")
+		Gravity = 20
+		# Gravity part
+		velocity.y = velocity.y + Gravity
+		if velocity.y > MAXFALLSPEED:
+			velocity.y = MAXFALLSPEED
+		#Left and Right Movemwnt
+		if Input.is_action_pressed("right"):
+			facing_right = true
+			velocity.x = SPEED
+			$AnimatedSprite.play("run")
+		elif Input.is_action_pressed("left"):
+			facing_right = false
+			velocity.x = -SPEED
+			$AnimatedSprite.play("run")
+		else:
+			# Implement resistance force an player's movement. (So not move ifinitely)
+			velocity.x =  lerp(velocity.x, 0, 0.2)
 			$AnimatedSprite.play("idle")
-	if is_on_floor():
-		if Input.is_action_pressed("jump"):
-			velocity.y = - JUMPFORCE
-	if not is_on_floor() and is_hitting == false: 
-		if velocity.y < 0:
-			$AnimatedSprite.play("jump")
+
+	if Input.is_action_just_pressed("jump"):
+		is_levitating = not is_levitating
+		
+	
 	# Hit
 	if Input.is_action_just_pressed("hit"):
 		shoot()
 		$AnimatedSprite.play("hit")
-		is_hitting = true
+
 
 	
 	# Make velocity implmented on player's movement
 	velocity = move_and_slide(velocity, Vector2.UP)
 	
-func _on_AnimatedSprite_animation_finished():
-	if $AnimatedSprite.animation == "hit":
-		is_hitting = false
-
 func shoot():
 	var bullet = bulletPath.instance()
 	get_parent().add_child(bullet)
