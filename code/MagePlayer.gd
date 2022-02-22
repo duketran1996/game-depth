@@ -8,6 +8,7 @@ const MAXFALLSPEED = 1000
 const JUMPFORCE = 1000
 var facing_right = true
 var is_hitting = false
+const bulletPath = preload("res://Asset/Scene/Bullet.tscn")
 
 func _physics_process(delta):
 	if facing_right == true:
@@ -40,7 +41,8 @@ func _physics_process(delta):
 		if velocity.y < 0:
 			$AnimatedSprite.play("jump")
 	# Hit
-	if Input.is_action_pressed("hit"):
+	if Input.is_action_just_pressed("hit"):
+		shoot()
 		$AnimatedSprite.play("hit")
 		is_hitting = true
 
@@ -52,3 +54,14 @@ func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "hit":
 		is_hitting = false
 
+func shoot():
+	var bullet = bulletPath.instance()
+	get_parent().add_child(bullet)
+	if facing_right == true:
+		bullet.get_node("Sprite").scale.x = 1
+		bullet.position = position + Vector2(1, 0)
+	else:
+		bullet.get_node("Sprite").scale.x = -1
+		bullet.position = position + Vector2(-1, 0)
+		bullet.velocity = -bullet.velocity
+		

@@ -1,2 +1,0 @@
-﻿57016
-/Users/xipeng/Desktop/Godot_mono.app/Contents/MacOS/Godot
