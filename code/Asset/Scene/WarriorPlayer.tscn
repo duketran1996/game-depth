@@ -33,7 +33,53 @@
 [ext_resource path="res://sprites/Elementals_fire_knight_basic_v1.0/png/05_1_atk/1_atk_4.png" type="Texture" id=31]
 
 [sub_resource type="CapsuleShape2D" id=1]
-height = 40.0
+radius = 16.0
+height = 12.5171
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 224, 112 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 224, 112 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 224, 112 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 224, 112 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 224, 112 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 224, 112 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 224, 112 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 224, 112 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 224, 112 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
@@ -145,53 +191,13 @@ flags = 4
 atlas = ExtResource( 26 )
 region = Rect2( 0, 0, 224, 112 )
 
-[sub_resource type="AtlasTexture" id=2]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 224, 112 )
-
-[sub_resource type="AtlasTexture" id=3]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 224, 112 )
-
-[sub_resource type="AtlasTexture" id=5]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 224, 112 )
-
-[sub_resource type="AtlasTexture" id=6]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 224, 112 )
-
-[sub_resource type="AtlasTexture" id=7]
-flags = 4
-atlas = ExtResource( 7 )
-region = Rect2( 0, 0, 224, 112 )
-
-[sub_resource type="AtlasTexture" id=8]
-flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 0, 0, 224, 112 )
-
-[sub_resource type="AtlasTexture" id=9]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 0, 0, 224, 112 )
-
-[sub_resource type="AtlasTexture" id=10]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 224, 112 )
-
-[sub_resource type="AtlasTexture" id=11]
-flags = 4
-atlas = ExtResource( 8 )
-region = Rect2( 0, 0, 224, 112 )
-
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
 "loop": true,
 "name": "run",
@@ -206,21 +212,18 @@ animations = [ {
 "loop": false,
 "name": "hit",
 "speed": 7.0
-}, {
-"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
 } ]
 
 [node name="WarriorPlayer" type="KinematicBody2D"]
+position = Vector2( -1, -62 )
+scale = Vector2( 1.75, 1.75 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 30 )
+position = Vector2( 0, 34.83 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
