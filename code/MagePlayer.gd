@@ -59,9 +59,9 @@ func shoot():
 	get_parent().add_child(bullet)
 	if facing_right == true:
 		bullet.get_node("Sprite").scale.x = 1
-		bullet.position = position + Vector2(1, 0)
+		bullet.position = position + Vector2(5, 0)
 	else:
 		bullet.get_node("Sprite").scale.x = -1
-		bullet.position = position + Vector2(-1, 0)
+		bullet.position = position + Vector2(-5, 0)
 		bullet.velocity = -bullet.velocity
 		
