@@ -80,16 +80,6 @@ flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 1617, 0, 231, 190 )
 
-[sub_resource type="AtlasTexture" id=13]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 231, 190 )
-
-[sub_resource type="AtlasTexture" id=14]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 231, 0, 231, 190 )
-
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
 atlas = ExtResource( 3 )
@@ -110,6 +100,16 @@ flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 693, 0, 231, 190 )
 
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 231, 190 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 231, 0, 231, 190 )
+
 [sub_resource type="SpriteFrames" id=8]
 animations = [ {
 "frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
@@ -122,15 +122,15 @@ animations = [ {
 "name": "run",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 13 ), SubResource( 14 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
 "loop": false,
 "name": "hit",
 "speed": 10.0
+}, {
+"frames": [ SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
 } ]
 
 [node name="MagePlayer" type="KinematicBody2D"]
@@ -145,7 +145,9 @@ position = Vector2( -7.6, 7.582 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-visible = false
+offset = Vector2( 0, -50 )
+current = true
+zoom = Vector2( 0.8, 0.8 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 8 )

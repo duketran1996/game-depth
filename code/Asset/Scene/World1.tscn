@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Asset/Scene/MagePlayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Asset/DungeonTileset/background/grey_L3.png" type="Texture" id=2]
-[ext_resource path="res://Asset/Scene/WarriorPlayer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Asset/DungeonTileset/background/grey_L2.png" type="Texture" id=4]
 [ext_resource path="res://Asset/DungeonTileset/background/fade-orange.jpg" type="Texture" id=5]
 [ext_resource path="res://Asset/DungeonTileset/tilesets/ground_tileset.png" type="Texture" id=6]
@@ -131,35 +130,8 @@ position = Vector2( 439, 358.5 )
 scale = Vector2( 2.37188, 2.852 )
 texture = ExtResource( 7 )
 
-[node name="WarriorPlayer" parent="." instance=ExtResource( 3 )]
-visible = false
-position = Vector2( 198, 465 )
-scale = Vector2( 1.6, 1.6 )
-
-[node name="Camera2D3" type="Camera2D" parent="WarriorPlayer"]
-visible = false
-scale = Vector2( 1e-05, 1e-05 )
-current = true
-limit_left = 0
-limit_top = 0
-limit_bottom = 600
-drag_margin_h_enabled = true
-drag_margin_right = 0.1
-editor_draw_limits = true
-
 [node name="MagePlayer" parent="." instance=ExtResource( 1 )]
 position = Vector2( 107, 575 )
-
-[node name="Camera2D3" type="Camera2D" parent="MagePlayer"]
-visible = false
-position = Vector2( -110, -508 )
-scale = Vector2( 1e-05, 1e-05 )
-limit_left = 0
-limit_top = 0
-limit_bottom = 600
-drag_margin_h_enabled = true
-drag_margin_right = 0.1
-editor_draw_limits = true
 
 [node name="DungeonMap" type="TileMap" parent="."]
 tile_set = SubResource( 69 )
