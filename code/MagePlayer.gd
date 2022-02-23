@@ -10,14 +10,19 @@ const bulletPath = preload("res://Asset/Scene/Bullet.tscn")
 var is_levitating = false
 var is_hitting = false
 
+onready var mana = get_node("/root/World1/CanvasLayer/Mana")
+
 func _physics_process(delta):
 	if facing_right == true:
 		$AnimatedSprite.scale.x = 1
 	else:
 		$AnimatedSprite.scale.x = -1
 	
-	if is_levitating == true:
+	if is_levitating == true and mana.value != 0:
 		Gravity = 0
+		
+		if not mana.value == 0:
+			mana.value -= 0.1
 		
 		if is_hitting == false:
 			$AnimatedSprite.play("jump")
@@ -75,6 +80,7 @@ func _physics_process(delta):
 	
 func shoot():
 	var bullet = bulletPath.instance()
+	mana.value -= 0.4
 	
 	if facing_right == true:
 		bullet.get_node("Sprite").scale.x = 1
