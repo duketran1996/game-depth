@@ -14,6 +14,10 @@ config/name="gandaft-dash"
 run/main_scene="res://Asset/Scene/World1.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/height=700
+
 [input]
 
 left={
