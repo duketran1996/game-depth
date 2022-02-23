@@ -93,7 +93,6 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2( 1.52588e-05, 3.05176e-05 )
-scale = Vector2( 1, 1 )
 motion_scale = Vector2( 0, 1 )
 motion_mirroring = Vector2( 1440, 0 )
 
@@ -104,7 +103,6 @@ texture = ExtResource( 5 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2( 1.52588e-05, 3.05176e-05 )
-scale = Vector2( 1, 1 )
 motion_scale = Vector2( 0, 1 )
 motion_mirroring = Vector2( 1440, 0 )
 
@@ -115,7 +113,6 @@ texture = ExtResource( 4 )
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2( 1.52588e-05, 3.05176e-05 )
-scale = Vector2( 1, 1 )
 motion_scale = Vector2( 0.1, 1 )
 motion_mirroring = Vector2( 1440, 0 )
 
@@ -126,7 +123,6 @@ texture = ExtResource( 2 )
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2( 1.52588e-05, 3.05176e-05 )
-scale = Vector2( 1, 1 )
 motion_scale = Vector2( 0.2, 1 )
 motion_mirroring = Vector2( 1440, 0 )
 

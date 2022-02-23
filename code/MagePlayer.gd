@@ -75,14 +75,16 @@ func _physics_process(delta):
 	
 func shoot():
 	var bullet = bulletPath.instance()
-	get_parent().add_child(bullet)
+	
 	if facing_right == true:
 		bullet.get_node("Sprite").scale.x = 1
 		bullet.position = position + Vector2(5, 0)
+		get_parent().add_child(bullet)
 	else:
 		bullet.get_node("Sprite").scale.x = -1
-		bullet.position = position + Vector2(-5, 0)
+		bullet.position = position + Vector2(-10, 0)
 		bullet.velocity = -bullet.velocity
+		get_parent().add_child(bullet)
 		
 func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "hit":
