@@ -13,6 +13,8 @@ const swordPath = preload("res://Asset/Scene/SwordLight.tscn")
 onready var health_bar = get_node("/root/World1/CanvasLayer/Health")
 var can_ult = true
 
+onready var stamina = get_node("/root/World1/CanvasLayer/Stamina")
+
 func _physics_process(delta):
 	if facing_right == true:
 		$AnimatedSprite.scale.x = 1
@@ -40,6 +42,7 @@ func _physics_process(delta):
 	if is_on_floor():
 		if Input.is_action_pressed("jump"):
 			velocity.y = - JUMPFORCE
+			stamina.value -= 1
 	if not is_on_floor() and is_hitting == false: 
 		if velocity.y < 0:
 			$AnimatedSprite.play("jump")
@@ -47,12 +50,14 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("hit"):
 		SwordOn(30)
 		$AnimatedSprite.play("hit")
+		stamina.value -= 5
 		is_hitting = true
 	
 	if Input.is_action_just_pressed("Ultimate") and can_ult:
 		$AnimatedSprite.play("ultimate")
 		$Timer2.start()
 		health_bar.value += 20
+		stamina.value -= 10
 		is_ulting = true
 		can_ult = false
 		

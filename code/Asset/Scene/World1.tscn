@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://World1.gd" type="Script" id=1]
 [ext_resource path="res://Asset/DungeonTileset/background/grey_L3.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Asset/Scene/coin.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Asset/Scene/Enemy.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Asset/SkeletonEnemy.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Asset/Stuffs/sword.png" type="Texture" id=16]
 
 [sub_resource type="ConvexPolygonShape2D" id=70]
 points = PoolVector2Array( 64, 48, 0, 48, 0, 0, 64, 0 )
@@ -123,6 +124,7 @@ corner_radius_top_left = 1
 corner_radius_top_right = 1
 corner_radius_bottom_right = 1
 corner_radius_bottom_left = 1
+expand_margin_right = 1.0
 
 [sub_resource type="StyleBoxFlat" id=77]
 bg_color = Color( 0.129412, 0.345098, 0.592157, 1 )
@@ -146,6 +148,30 @@ corner_radius_top_left = 1
 corner_radius_top_right = 1
 corner_radius_bottom_right = 1
 corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id=79]
+bg_color = Color( 0.898039, 0.0705882, 0.0705882, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id=80]
+bg_color = Color( 0.313726, 0.294118, 0.294118, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+expand_margin_right = 1.0
 
 [node name="World1" type="Node2D"]
 script = ExtResource( 1 )
@@ -220,6 +246,7 @@ scale = Vector2( 0.0249306, 0.0294444 )
 texture = ExtResource( 9 )
 
 [node name="Mana" type="ProgressBar" parent="CanvasLayer"]
+visible = false
 margin_left = 29.0
 margin_top = 82.0
 margin_right = 209.0
@@ -232,10 +259,31 @@ __meta__ = {
 }
 
 [node name="Mana2" type="Sprite" parent="CanvasLayer"]
+visible = false
 position = Vector2( 30, 92 )
 rotation = -0.610865
 scale = Vector2( 0.0702791, 0.0577979 )
 texture = ExtResource( 3 )
+
+[node name="Stamina" type="ProgressBar" parent="CanvasLayer"]
+visible = false
+margin_left = 30.0
+margin_top = 82.0
+margin_right = 210.0
+margin_bottom = 106.0
+custom_styles/fg = SubResource( 79 )
+custom_styles/bg = SubResource( 80 )
+value = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sword" type="Sprite" parent="CanvasLayer"]
+visible = false
+position = Vector2( 28, 90 )
+rotation = -0.537561
+scale = Vector2( 0.0749399, 0.0689911 )
+texture = ExtResource( 16 )
 
 [node name="Coins" type="Node2D" parent="."]
 position = Vector2( 924, 165 )

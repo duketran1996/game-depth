@@ -1,55 +1,98 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://sprites/Wizard Pack/Idle.png" type="Texture" id=1]
-[ext_resource path="res://sprites/Elementals_fire_knight_basic_v1.0/png/01_idle/idle_1.png" type="Texture" id=2]
+[ext_resource path="res://Asset/Scene/WarriorAnimated.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/SelectMenu.gd" type="Script" id=3]
+[ext_resource path="res://Asset/Stuffs/warrior-bg-1 copy 2.png" type="Texture" id=4]
+[ext_resource path="res://Asset/Stuffs/mage-bg copy 2.jpeg" type="Texture" id=5]
+[ext_resource path="res://Asset/Scene/MageAnimated.tscn" type="PackedScene" id=6]
 
-[sub_resource type="AtlasTexture" id=1]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 205.923, 174.62 )
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.435294, 0.270588, 0.219608, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.266667, 0.443137, 0.615686, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.823529, 0.447059, 0.286275, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 0, 7 )
 script = ExtResource( 3 )
 
+[node name="Warrior-bg-1Copy2" type="Sprite" parent="."]
+position = Vector2( 763, 353 )
+scale = Vector2( 0.997132, 1.2526 )
+texture = ExtResource( 4 )
+
+[node name="Mage-bgCopy2" type="Sprite" parent="."]
+position = Vector2( 229, 352.5 )
+scale = Vector2( 0.874799, 0.907384 )
+texture = ExtResource( 5 )
+
 [node name="Label" type="Label" parent="."]
-margin_top = 30.0
-margin_right = 513.0
-margin_bottom = 44.0
+margin_left = 244.0
+margin_top = 37.0
+margin_right = 495.0
+margin_bottom = 82.0
 rect_scale = Vector2( 2, 2 )
-text = "Character Select"
+custom_styles/normal = SubResource( 1 )
+text = "
+Character Select"
 align = 1
 uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Warrior" type="Sprite" parent="."]
-position = Vector2( 714, 206.918 )
+[node name="MageAnimated" parent="." instance=ExtResource( 6 )]
+position = Vector2( 206, 481 )
 scale = Vector2( 2.78571, 3.46282 )
-texture = ExtResource( 2 )
 
-[node name="Mage" type="Sprite" parent="."]
-position = Vector2( 256, 305 )
-scale = Vector2( 1.55366, 1.87931 )
-texture = SubResource( 1 )
+[node name="WarriorAnimated" parent="." instance=ExtResource( 1 )]
+position = Vector2( 762, 311 )
+scale = Vector2( 2.78571, 3.46282 )
 
 [node name="MageButton" type="Button" parent="."]
-margin_left = 121.0
-margin_top = 456.0
-margin_right = 396.0
-margin_bottom = 568.0
+margin_left = 127.0
+margin_top = 557.0
+margin_right = 320.0
+margin_bottom = 619.0
+custom_styles/hover = SubResource( 2 )
 text = "Mage"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="WarriorButton" type="Button" parent="."]
-margin_left = 574.0
-margin_top = 456.0
-margin_right = 847.0
-margin_bottom = 568.0
+margin_left = 672.0
+margin_top = 561.0
+margin_right = 865.0
+margin_bottom = 623.0
+custom_styles/hover = SubResource( 3 )
 text = "Warrior"
 __meta__ = {
 "_edit_use_anchors_": false
