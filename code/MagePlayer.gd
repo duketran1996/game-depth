@@ -77,6 +77,7 @@ func _physics_process(delta):
 		is_hitting = true
 
 	if Input.is_action_just_pressed("Ultimate") and can_ult:
+		health_bar.value = health_bar.value *0.7
 		mana.value = 100;
 		can_ult = false
 		$Timer.start()
