@@ -11,8 +11,12 @@ config_version=4
 [application]
 
 config/name="gandaft-dash"
-run/main_scene="res://Asset/Scene/World1.tscn"
+run/main_scene="res://Asset/Scene/SelectMenu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+SelectMenu="*res://Scripts/SelectMenu.gd"
 
 [display]
 

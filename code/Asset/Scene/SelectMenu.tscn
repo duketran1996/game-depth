@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://sprites/Wizard Pack/Idle.png" type="Texture" id=1]
+[ext_resource path="res://sprites/Elementals_fire_knight_basic_v1.0/png/01_idle/idle_1.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/SelectMenu.gd" type="Script" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 205.923, 174.62 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 0, 7 )
+script = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_top = 30.0
+margin_right = 256.0
+margin_bottom = 44.0
+rect_scale = Vector2( 4, 4 )
+text = "Character Select"
+align = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Warrior" type="Sprite" parent="."]
+position = Vector2( 714, 206.918 )
+scale = Vector2( 2.78571, 3.46282 )
+texture = ExtResource( 2 )
+
+[node name="Mage" type="Sprite" parent="."]
+position = Vector2( 256, 305 )
+scale = Vector2( 1.55366, 1.87931 )
+texture = SubResource( 1 )
+
+[node name="MageButton" type="Button" parent="."]
+margin_left = 121.0
+margin_top = 456.0
+margin_right = 396.0
+margin_bottom = 568.0
+text = "Mage"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WarriorButton" type="Button" parent="."]
+margin_left = 574.0
+margin_top = 456.0
+margin_right = 847.0
+margin_bottom = 568.0
+text = "Warrior"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="MageButton" to="." method="_on_MageButton_pressed"]
+[connection signal="pressed" from="WarriorButton" to="." method="_on_WarriorButton_pressed"]
