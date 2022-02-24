@@ -73,7 +73,8 @@ func _physics_process(delta):
 		$AnimatedSprite.play("hit")
 		is_hitting = true
 
-
+	if Input.is_action_just_pressed("Ultimate"):
+		mana.value = 100;
 	
 	# Make velocity implmented on player's movement
 	velocity = move_and_slide(velocity, Vector2.UP)
