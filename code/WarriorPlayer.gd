@@ -51,6 +51,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("hit") and stamina.value >= 10:
 		SwordOn(30)
 		$AnimatedSprite.play("hit")
+		$AudioStreamPlayer.play();
 		stamina.value -= 10
 		is_hitting = true
 	
