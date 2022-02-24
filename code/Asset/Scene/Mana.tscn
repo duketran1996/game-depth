@@ -29,7 +29,7 @@ script = ExtResource( 9 )
 position = Vector2( -0.25, 0 )
 scale = Vector2( 1.037, 1.187 )
 frames = SubResource( 1 )
-frame = 5
+frame = 6
 playing = true
 
 [node name="ManaCollisionShape2D" type="CollisionShape2D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://World1.gd" type="Script" id=1]
 [ext_resource path="res://Asset/DungeonTileset/background/grey_L3.png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Asset/Scene/Enemy.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Asset/SkeletonEnemy.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Asset/Stuffs/sword.png" type="Texture" id=16]
+[ext_resource path="res://Asset/Scene/Stamina.tscn" type="PackedScene" id=17]
 
 [sub_resource type="ConvexPolygonShape2D" id=70]
 points = PoolVector2Array( 64, 48, 0, 48, 0, 0, 64, 0 )
@@ -450,3 +451,18 @@ position = Vector2( 116, 579 )
 
 [node name="SkeletonEnemy" parent="." instance=ExtResource( 15 )]
 position = Vector2( 825, 581 )
+
+[node name="Stamina" parent="." instance=ExtResource( 17 )]
+position = Vector2( 463, 608 )
+
+[node name="Stamina" parent="Stamina" instance=ExtResource( 17 )]
+position = Vector2( 702, -14 )
+
+[node name="Stamina2" parent="Stamina" instance=ExtResource( 17 )]
+position = Vector2( 2134, -219 )
+
+[node name="Stamina3" parent="Stamina" instance=ExtResource( 17 )]
+position = Vector2( 4202, -107 )
+
+[node name="Stamina" parent="Stamina/Stamina3" instance=ExtResource( 17 )]
+position = Vector2( 505, -61 )
