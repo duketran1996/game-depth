@@ -25,7 +25,7 @@ func dead():
 	$Timer.start()
 
 func _physics_process(delta):
-	if health <= 0:
+	if health <= 0 and !is_dead:
 		dead()
 	if is_dead == false:
 		if !is_hitting:
