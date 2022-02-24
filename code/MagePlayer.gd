@@ -21,6 +21,7 @@ var is_lost = false
 
 func _physics_process(delta):
 	var health = get_node("/root/World1/CanvasLayer/Health")
+	var Win = get_node("/root/World1/Win")
 	if Global.coins > 5:
 		damage = 60
 	if health.value <= 0:
@@ -28,6 +29,12 @@ func _physics_process(delta):
 		lose_label.set_deferred("visible", true)
 		if Input.is_key_pressed(KEY_ENTER):
 			get_tree().change_scene("res://Asset/Scene/SelectMenu.tscn")
+			
+	if Win.is_win == true:
+		is_lost = true
+		if Input.is_key_pressed(KEY_ENTER):
+			get_tree().change_scene("res://Asset/Scene/SelectMenu.tscn")
+		
 		
 	if is_lost == false:
 		if facing_right == true:
