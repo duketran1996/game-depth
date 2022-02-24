@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/alexander-nakarada-highland-song.wav-416a49575e7af22db48f1e3139d86471.sample"
+
+[deps]
+
+source_file="res://Asset/alexander-nakarada-highland-song.wav"
+dest_files=[ "res://.import/alexander-nakarada-highland-song.wav-416a49575e7af22db48f1e3139d86471.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://World1.gd" type="Script" id=1]
 [ext_resource path="res://Asset/DungeonTileset/background/grey_L3.png" type="Texture" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://sprites/coin4_16x16.png" type="Texture" id=18]
 [ext_resource path="res://Scripts/CoinCounter.gd" type="Script" id=19]
 [ext_resource path="res://Asset/Scene/SkeletonEnemy.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Asset/alexander-nakarada-highland-song.wav" type="AudioStream" id=21]
 
 [sub_resource type="ConvexPolygonShape2D" id=70]
 points = PoolVector2Array( 64, 48, 0, 48, 0, 0, 64, 0 )
@@ -564,3 +565,7 @@ position = Vector2( 3338, 536 )
 
 [node name="SkeletonEnemy" parent="Skeletons" instance=ExtResource( 15 )]
 position = Vector2( 701, 557 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 21 )
+autoplay = true
