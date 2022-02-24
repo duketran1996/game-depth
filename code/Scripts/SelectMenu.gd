@@ -10,10 +10,10 @@ func _ready():
 	pass
 
 func _on_MageButton_pressed():
-	Global.selectedCharacter += 0
+	Global.selectedCharacter = 0
 	get_tree().change_scene("res://Asset/Scene/World1.tscn")
 
 
 func _on_WarriorButton_pressed():
-	Global.selectedCharacter += 1
+	Global.selectedCharacter = 1
 	get_tree().change_scene("res://Asset/Scene/World1.tscn")

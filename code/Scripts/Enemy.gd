@@ -38,4 +38,4 @@ func _physics_process(delta):
 
 func _on_Area2D_body_entered(body):
 	if "Player" in body.name:
-		body.health_bar.value -= 5 # Replace with function body.
+		body.health_bar.value -= 20 # Replace with function body.

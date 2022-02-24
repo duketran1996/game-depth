@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://World1.gd" type="Script" id=1]
 [ext_resource path="res://Asset/DungeonTileset/background/grey_L3.png" type="Texture" id=2]
@@ -231,6 +231,17 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="StyleBoxFlat" id=91]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
 [node name="World1" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -293,7 +304,7 @@ margin_bottom = 63.0
 rect_pivot_offset = Vector2( 108, 21 )
 custom_styles/fg = SubResource( 73 )
 custom_styles/bg = SubResource( 74 )
-value = 100.0
+value = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -356,6 +367,21 @@ __meta__ = {
 position = Vector2( 30, 139 )
 scale = Vector2( 1.25, 1.25 )
 frames = SubResource( 90 )
+
+[node name="LoseLabel" type="Label" parent="CanvasLayer"]
+visible = false
+margin_left = 280.0
+margin_top = 332.0
+margin_right = 442.0
+margin_bottom = 397.0
+custom_styles/normal = SubResource( 91 )
+text = "
+You Lost!
+Press Enter to restart"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Coins" type="Node2D" parent="."]
 position = Vector2( 924, 165 )
