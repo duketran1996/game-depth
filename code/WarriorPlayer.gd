@@ -8,6 +8,8 @@ const MAXFALLSPEED = 1000
 const JUMPFORCE = 1000
 var facing_right = true
 var is_hitting = false
+const swordPath = preload("res://Asset/Scene/SwordLight.tscn")
+onready var health_bar = get_node("/root/World1/CanvasLayer/Health")
 
 func _physics_process(delta):
 	if facing_right == true:
@@ -40,7 +42,8 @@ func _physics_process(delta):
 		if velocity.y < 0:
 			$AnimatedSprite.play("jump")
 	# Hit
-	if Input.is_action_pressed("hit"):
+	if Input.is_action_just_pressed("hit"):
+		SwordOn()
 		$AnimatedSprite.play("hit")
 		is_hitting = true
 
@@ -48,6 +51,17 @@ func _physics_process(delta):
 	# Make velocity implmented on player's movement
 	velocity = move_and_slide(velocity, Vector2.UP)
 	
+func SwordOn():
+	var sword = swordPath.instance()
+	
+	if facing_right == true:
+		sword.position = position + Vector2(80, 30)
+		get_parent().add_child(sword)
+		print("zuole")
+	else:
+		sword.position = position + Vector2(-80, 30)
+		get_parent().add_child(sword)
+
 func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "hit":
 		is_hitting = false
