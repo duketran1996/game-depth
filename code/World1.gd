@@ -16,8 +16,8 @@ onready var stam_icon = get_node("CanvasLayer/Sword")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var instance
-	print(SelectMenu.selectedCharacter)
-	if SelectMenu.selectedCharacter == 0:
+	print(Global.selectedCharacter)
+	if Global.selectedCharacter == 0:
 		instance = m.instance()
 		instance.position = Vector2(-121, 560)
 		add_child(instance)

@@ -214,7 +214,7 @@ animations = [ {
 "frames": [ SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
 "loop": false,
 "name": "hit",
-"speed": 7.0
+"speed": 10.0
 }, {
 "frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
 "loop": true,
@@ -226,15 +226,15 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 32 ), ExtResource( 49 ), ExtResource( 45 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 35 ), ExtResource( 34 ), ExtResource( 44 ), ExtResource( 33 ), ExtResource( 46 ), ExtResource( 39 ), ExtResource( 43 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 47 ), ExtResource( 42 ), ExtResource( 36 ), ExtResource( 48 ) ],
 "loop": false,
 "name": "ultimate",
 "speed": 10.0
+}, {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
 } ]
 
 [node name="WarriorPlayer" type="KinematicBody2D"]

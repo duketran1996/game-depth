@@ -1,10 +1,12 @@
-extends Area2D
+extends Node2D
 
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
+var selectedCharacter = 0
+var coins = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,12 +16,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-onready var coin_shape = get_node("CoinCollisionShape2D")
-onready var coin = get_node(".")
-
-func _on_coin_body_entered(player):
-	if player.name != "DungeonMap":
-		coin.hide()
-		Global.coins += 1
-		coin_shape.set_deferred("disabled", true)
