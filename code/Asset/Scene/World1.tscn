@@ -237,152 +237,162 @@ rotation = -0.610865
 scale = Vector2( 0.0702791, 0.0577979 )
 texture = ExtResource( 3 )
 
-[node name="skull" parent="." instance=ExtResource( 12 )]
+[node name="Coins" type="Node2D" parent="."]
 position = Vector2( 924, 165 )
 
-[node name="skull2" parent="." instance=ExtResource( 12 )]
-position = Vector2( 1081, 166 )
+[node name="coin3" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 46, -4 )
 
-[node name="Mana" parent="." instance=ExtResource( 11 )]
-position = Vector2( 1705, 322 )
+[node name="coin5" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 105, -3 )
 
-[node name="Health" parent="." instance=ExtResource( 10 )]
-position = Vector2( 2215, 97 )
+[node name="coin6" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( -50, 439 )
 
-[node name="skull3" parent="." instance=ExtResource( 12 )]
-position = Vector2( 2073, 163 )
+[node name="coin9" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 1251, -68 )
 
-[node name="coin18" parent="." instance=ExtResource( 13 )]
-position = Vector2( 5032, 75 )
+[node name="coin10" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 1178, -67 )
 
-[node name="Mana2" parent="." instance=ExtResource( 11 )]
-position = Vector2( 2926, 610 )
+[node name="coin12" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 2268, -2 )
 
-[node name="Health2" parent="." instance=ExtResource( 10 )]
-position = Vector2( 3194, 99 )
+[node name="coin13" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 2567, 478 )
 
-[node name="skull4" parent="." instance=ExtResource( 12 )]
-position = Vector2( 3708, 242 )
+[node name="coin19" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 4596, 412 )
 
-[node name="skull5" parent="." instance=ExtResource( 12 )]
-position = Vector2( 3535, 644 )
+[node name="coin17" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 1199, 365 )
 
-[node name="Mana3" parent="." instance=ExtResource( 11 )]
-position = Vector2( 4255, 276 )
+[node name="coin16" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 3874, 49 )
 
-[node name="skull6" parent="." instance=ExtResource( 12 )]
-position = Vector2( 4226, 277 )
+[node name="coin15" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 3877, 221 )
 
-[node name="skull7" parent="." instance=ExtResource( 12 )]
-position = Vector2( 4288, 277 )
+[node name="coin14" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 2655, 480 )
 
-[node name="Health3" parent="." instance=ExtResource( 10 )]
-position = Vector2( 4077, 479 )
+[node name="coin11" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 1533, 438 )
 
-[node name="Health4" parent="." instance=ExtResource( 10 )]
-position = Vector2( 5521, 250 )
+[node name="coin8" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 1213, -68 )
 
-[node name="Mana4" parent="." instance=ExtResource( 11 )]
-position = Vector2( 5164, 596 )
+[node name="coin7" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 530, 406 )
 
-[node name="skull8" parent="." instance=ExtResource( 12 )]
-position = Vector2( 5118, 595 )
+[node name="coin" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( -671, 431 )
 
-[node name="skull9" parent="." instance=ExtResource( 12 )]
-position = Vector2( 5219, 597 )
+[node name="coin4" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 74, -4 )
 
-[node name="Health5" parent="." instance=ExtResource( 10 )]
-position = Vector2( 5549, 251 )
+[node name="coin2" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( -409, 219 )
 
-[node name="skull10" parent="." instance=ExtResource( 12 )]
-position = Vector2( 2192, 167 )
+[node name="coin18" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 4108, -90 )
 
-[node name="skull11" parent="." instance=ExtResource( 12 )]
-position = Vector2( 1671, 372 )
-
-[node name="skull12" parent="." instance=ExtResource( 12 )]
-position = Vector2( 3617, 643 )
-
-[node name="skull13" parent="." instance=ExtResource( 12 )]
-position = Vector2( 3455, 641 )
-
-[node name="skull14" parent="." instance=ExtResource( 12 )]
-position = Vector2( 4767, 718 )
-
-[node name="skull15" parent="." instance=ExtResource( 12 )]
-position = Vector2( 4799, 716 )
-
-[node name="skull16" parent="." instance=ExtResource( 12 )]
-position = Vector2( 4832, 717 )
-
-[node name="Mana5" parent="." instance=ExtResource( 11 )]
-position = Vector2( 4998, 75 )
-
-[node name="skull17" parent="." instance=ExtResource( 12 )]
-position = Vector2( 4963, 75 )
-
-[node name="skull18" parent="." instance=ExtResource( 12 )]
-position = Vector2( 4771, 678 )
-
-[node name="skull19" parent="." instance=ExtResource( 12 )]
-position = Vector2( 4802, 681 )
-
-[node name="skull20" parent="." instance=ExtResource( 12 )]
-position = Vector2( 4831, 680 )
-
-[node name="Health6" parent="." instance=ExtResource( 10 )]
+[node name="Skulls" type="Node2D" parent="."]
 position = Vector2( 4798, 577 )
 
-[node name="coin2" parent="." instance=ExtResource( 13 )]
-position = Vector2( 515, 384 )
+[node name="skull20" parent="Skulls" instance=ExtResource( 12 )]
+position = Vector2( 33, 103 )
 
-[node name="coin3" parent="." instance=ExtResource( 13 )]
-position = Vector2( 970, 161 )
+[node name="skull19" parent="Skulls" instance=ExtResource( 12 )]
+position = Vector2( 4, 104 )
 
-[node name="coin4" parent="." instance=ExtResource( 13 )]
-position = Vector2( 998, 161 )
+[node name="skull18" parent="Skulls" instance=ExtResource( 12 )]
+position = Vector2( -27, 101 )
 
-[node name="coin" parent="." instance=ExtResource( 13 )]
-position = Vector2( 253, 596 )
+[node name="skull17" parent="Skulls" instance=ExtResource( 12 )]
+position = Vector2( 165, -502 )
 
-[node name="coin5" parent="." instance=ExtResource( 13 )]
-position = Vector2( 1029, 162 )
+[node name="skull16" parent="Skulls" instance=ExtResource( 12 )]
+position = Vector2( 34, 140 )
 
-[node name="coin6" parent="." instance=ExtResource( 13 )]
-position = Vector2( 874, 604 )
+[node name="skull15" parent="Skulls" instance=ExtResource( 12 )]
+position = Vector2( 1, 139 )
 
-[node name="coin7" parent="." instance=ExtResource( 13 )]
-position = Vector2( 1454, 571 )
+[node name="skull14" parent="Skulls" instance=ExtResource( 12 )]
+position = Vector2( -31, 141 )
 
-[node name="coin8" parent="." instance=ExtResource( 13 )]
-position = Vector2( 2137, 97 )
+[node name="skull13" parent="Skulls" instance=ExtResource( 12 )]
+position = Vector2( -1343, 64 )
 
-[node name="coin9" parent="." instance=ExtResource( 13 )]
-position = Vector2( 2175, 97 )
+[node name="skull12" parent="Skulls" instance=ExtResource( 12 )]
+position = Vector2( -1181, 66 )
 
-[node name="coin10" parent="." instance=ExtResource( 13 )]
-position = Vector2( 2102, 98 )
+[node name="skull11" parent="Skulls" instance=ExtResource( 12 )]
+position = Vector2( -3127, -205 )
 
-[node name="coin11" parent="." instance=ExtResource( 13 )]
-position = Vector2( 2457, 603 )
+[node name="skull10" parent="Skulls" instance=ExtResource( 12 )]
+position = Vector2( -2606, -410 )
 
-[node name="coin12" parent="." instance=ExtResource( 13 )]
-position = Vector2( 3192, 163 )
+[node name="skull9" parent="Skulls" instance=ExtResource( 12 )]
+position = Vector2( 421, 20 )
 
-[node name="coin13" parent="." instance=ExtResource( 13 )]
-position = Vector2( 3491, 643 )
+[node name="skull8" parent="Skulls" instance=ExtResource( 12 )]
+position = Vector2( 320, 18 )
 
-[node name="coin14" parent="." instance=ExtResource( 13 )]
-position = Vector2( 3579, 645 )
+[node name="skull7" parent="Skulls" instance=ExtResource( 12 )]
+position = Vector2( -510, -300 )
 
-[node name="coin15" parent="." instance=ExtResource( 13 )]
-position = Vector2( 4801, 386 )
+[node name="skull6" parent="Skulls" instance=ExtResource( 12 )]
+position = Vector2( -572, -300 )
 
-[node name="coin16" parent="." instance=ExtResource( 13 )]
-position = Vector2( 4798, 214 )
+[node name="skull5" parent="Skulls" instance=ExtResource( 12 )]
+position = Vector2( -1263, 67 )
 
-[node name="coin17" parent="." instance=ExtResource( 13 )]
-position = Vector2( 2123, 530 )
+[node name="skull4" parent="Skulls" instance=ExtResource( 12 )]
+position = Vector2( -1090, -335 )
 
-[node name="coin19" parent="." instance=ExtResource( 13 )]
-position = Vector2( 5520, 577 )
+[node name="skull3" parent="Skulls" instance=ExtResource( 12 )]
+position = Vector2( -2725, -414 )
+
+[node name="skull2" parent="Skulls" instance=ExtResource( 12 )]
+position = Vector2( -3717, -411 )
+
+[node name="skull" parent="Skulls" instance=ExtResource( 12 )]
+position = Vector2( -3874, -412 )
+
+[node name="Manas" type="Node2D" parent="."]
+
+[node name="Mana5" parent="Manas" instance=ExtResource( 11 )]
+position = Vector2( 4998, 75 )
+
+[node name="Mana4" parent="Manas" instance=ExtResource( 11 )]
+position = Vector2( 5164, 596 )
+
+[node name="Mana2" parent="Manas" instance=ExtResource( 11 )]
+position = Vector2( 2926, 610 )
+
+[node name="Mana" parent="Manas" instance=ExtResource( 11 )]
+position = Vector2( 1705, 322 )
+
+[node name="Mana3" parent="Manas" instance=ExtResource( 11 )]
+position = Vector2( 4255, 276 )
+
+[node name="Healths" type="Node2D" parent="."]
+
+[node name="Health" parent="Healths" instance=ExtResource( 10 )]
+position = Vector2( 2215, 97 )
+
+[node name="Health2" parent="Healths" instance=ExtResource( 10 )]
+position = Vector2( 3194, 99 )
+
+[node name="Health3" parent="Healths" instance=ExtResource( 10 )]
+position = Vector2( 4077, 479 )
+
+[node name="Health4" parent="Healths" instance=ExtResource( 10 )]
+position = Vector2( 5521, 250 )
+
+[node name="Health5" parent="Healths" instance=ExtResource( 10 )]
+position = Vector2( 5549, 251 )
+
+[node name="Health6" parent="Healths" instance=ExtResource( 10 )]
+position = Vector2( 4798, 577 )
