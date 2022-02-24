@@ -9,6 +9,7 @@ var facing_right = true
 const bulletPath = preload("res://Asset/Scene/Bullet.tscn")
 var is_levitating = false
 var is_hitting = false
+var can_ult = true
 
 onready var health_bar = get_node("/root/World1/CanvasLayer/Health")
 onready var mana = get_node("/root/World1/CanvasLayer/Mana")
@@ -74,8 +75,10 @@ func _physics_process(delta):
 		$AnimatedSprite.play("hit")
 		is_hitting = true
 
-	if Input.is_action_just_pressed("Ultimate"):
+	if Input.is_action_just_pressed("Ultimate") and can_ult:
 		mana.value = 100;
+		can_ult = false
+		$Timer.start()
 	
 	# Make velocity implmented on player's movement
 	velocity = move_and_slide(velocity, Vector2.UP)
@@ -97,3 +100,7 @@ func shoot():
 func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "hit":
 		is_hitting = false
+
+
+func _on_Timer_timeout():
+	can_ult = true
