@@ -10,6 +10,7 @@ const bulletPath = preload("res://Asset/Scene/Bullet.tscn")
 var is_levitating = false
 var is_hitting = false
 var can_ult = true
+var damage = 30
 
 onready var health_bar = get_node("/root/World1/CanvasLayer/Health")
 onready var mana = get_node("/root/World1/CanvasLayer/Mana")
@@ -20,7 +21,8 @@ var is_lost = false
 
 func _physics_process(delta):
 	var health = get_node("/root/World1/CanvasLayer/Health")
-	
+	if Global.coins > 5:
+		damage = 60
 	if health.value <= 0:
 		is_lost = true
 		lose_label.set_deferred("visible", true)
@@ -104,10 +106,12 @@ func shoot():
 	
 	if facing_right == true:
 		bullet.get_node("AnimatedSprite").scale.x = 1
+		bullet.damage = damage
 		bullet.position = position + Vector2(50, 0)
 		get_parent().add_child(bullet)
 	else:
 		bullet.get_node("AnimatedSprite").scale.x = -1
+		bullet.damage = damage
 		bullet.position = position + Vector2(-50, 0)
 		bullet.velocity = -bullet.velocity
 		get_parent().add_child(bullet)

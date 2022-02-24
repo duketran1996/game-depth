@@ -12,7 +12,7 @@ var is_ulting = false
 const swordPath = preload("res://Asset/Scene/SwordLight.tscn")
 onready var health_bar = get_node("/root/World1/CanvasLayer/Health")
 var can_ult = true
-
+var damage = 30
 onready var stamina = get_node("/root/World1/CanvasLayer/Stamina")
 
 onready var lose_label = get_node("/root/World1/CanvasLayer/LoseLabel") 
@@ -21,6 +21,8 @@ var is_lost = false
 
 func _physics_process(delta):
 	var health = get_node("/root/World1/CanvasLayer/Health")
+	if Global.coins > 5:
+		damage = 60
 	
 	if health.value <= 0:
 		is_lost = true
@@ -62,7 +64,7 @@ func _physics_process(delta):
 				$AnimatedSprite.play("jump")
 		# Hit
 		if Input.is_action_just_pressed("hit") and stamina.value >= 10:
-			SwordOn(30)
+			SwordOn(damage)
 			$AnimatedSprite.play("hit")
 			$AudioStreamPlayer.play();
 			stamina.value -= 10
@@ -105,5 +107,5 @@ func _on_Timer_timeout():
 
 
 func _on_Timer2_timeout():
-	SwordOn(50)
+	SwordOn(damage*2)
 	
