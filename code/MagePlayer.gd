@@ -84,12 +84,12 @@ func shoot():
 	mana.value -= 0.4
 	
 	if facing_right == true:
-		bullet.get_node("Sprite").scale.x = 1
-		bullet.position = position + Vector2(5, 0)
+		bullet.get_node("AnimatedSprite").scale.x = 1
+		bullet.position = position + Vector2(50, 0)
 		get_parent().add_child(bullet)
 	else:
-		bullet.get_node("Sprite").scale.x = -1
-		bullet.position = position + Vector2(-10, 0)
+		bullet.get_node("AnimatedSprite").scale.x = -1
+		bullet.position = position + Vector2(-50, 0)
 		bullet.velocity = -bullet.velocity
 		get_parent().add_child(bullet)
 		
