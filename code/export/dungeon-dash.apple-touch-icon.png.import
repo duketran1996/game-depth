@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Skull.png-eebd818fa1cabea92c67295abf94d7b1.stex"
+path="res://.import/dungeon-dash.apple-touch-icon.png-9aa495cee5c798f5038435396a6e5d8f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/DungeonTileset/Skull/Skull.png"
-dest_files=[ "res://.import/Skull.png-eebd818fa1cabea92c67295abf94d7b1.stex" ]
+source_file="res://export/dungeon-dash.apple-touch-icon.png"
+dest_files=[ "res://.import/dungeon-dash.apple-touch-icon.png-9aa495cee5c798f5038435396a6e5d8f.stex" ]
 
 [params]
 

@@ -28,11 +28,13 @@ func _physics_process(delta):
 		is_lost = true
 		lose_label.set_deferred("visible", true)
 		if Input.is_key_pressed(KEY_ENTER):
+			Global.coins = 0
 			get_tree().change_scene("res://Asset/Scene/SelectMenu.tscn")
 			
 	if Win.is_win == true:
 		is_lost = true
 		if Input.is_key_pressed(KEY_ENTER):
+			Global.coins = 0
 			get_tree().change_scene("res://Asset/Scene/SelectMenu.tscn")
 		
 		
