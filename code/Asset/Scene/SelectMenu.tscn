@@ -15,9 +15,9 @@ script = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="."]
 margin_top = 30.0
-margin_right = 256.0
+margin_right = 513.0
 margin_bottom = 44.0
-rect_scale = Vector2( 4, 4 )
+rect_scale = Vector2( 2, 2 )
 text = "Character Select"
 align = 1
 uppercase = true
