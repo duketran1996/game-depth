@@ -10,6 +10,7 @@ var speed = 30
 var is_moving_right = false
 var is_hitting = false
 var is_dead = false
+var health = 90
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -23,6 +24,8 @@ func dead():
 	queue_free()
 
 func _physics_process(delta):
+	if health <= 0:
+		dead()
 	if is_dead == false:
 		velocity.x = speed if is_moving_right else -speed
 		velocity.y = velocity.y + gravity
@@ -31,3 +34,8 @@ func _physics_process(delta):
 			is_moving_right = !is_moving_right
 			scale.x = -scale.x
 
+
+
+func _on_Area2D_body_entered(body):
+	if "Player" in body.name:
+		body.health_bar.value -= 5 # Replace with function body.

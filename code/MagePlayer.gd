@@ -10,6 +10,7 @@ const bulletPath = preload("res://Asset/Scene/Bullet.tscn")
 var is_levitating = false
 var is_hitting = false
 
+onready var health_bar = get_node("/root/World1/CanvasLayer/Health")
 onready var mana = get_node("/root/World1/CanvasLayer/Mana")
 
 func _physics_process(delta):

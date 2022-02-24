@@ -13,6 +13,6 @@ func _physics_process(delta):
 
 func _on_Bullet_body_entered(body):
 	if "Enemy" in body.name:
-		body.dead()
+		body.health -= 30
 	if body:
 		queue_free()
