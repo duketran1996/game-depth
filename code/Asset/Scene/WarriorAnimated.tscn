@@ -49,6 +49,51 @@
 [ext_resource path="res://sprites/Elementals_fire_knight_basic_v1.0/png/03_jump_up/jump_up_2.png" type="Texture" id=47]
 [ext_resource path="res://sprites/Elementals_fire_knight_basic_v1.0/png/01_idle/idle_5.png" type="Texture" id=48]
 
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 16 )
+region = Rect2( 0, 0, 224, 112 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 224, 112 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 224, 112 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 224, 112 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 224, 112 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 48 )
+region = Rect2( 0, 0, 224, 112 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 224, 112 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 0, 0, 224, 112 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 224, 112 )
+
 [sub_resource type="AtlasTexture" id=23]
 flags = 4
 atlas = ExtResource( 21 )
@@ -159,57 +204,22 @@ flags = 4
 atlas = ExtResource( 46 )
 region = Rect2( 0, 0, 224, 112 )
 
-[sub_resource type="AtlasTexture" id=2]
-flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 0, 0, 224, 112 )
-
-[sub_resource type="AtlasTexture" id=3]
-flags = 4
-atlas = ExtResource( 15 )
-region = Rect2( 0, 0, 224, 112 )
-
-[sub_resource type="AtlasTexture" id=5]
-flags = 4
-atlas = ExtResource( 7 )
-region = Rect2( 0, 0, 224, 112 )
-
-[sub_resource type="AtlasTexture" id=6]
-flags = 4
-atlas = ExtResource( 7 )
-region = Rect2( 0, 0, 224, 112 )
-
-[sub_resource type="AtlasTexture" id=7]
-flags = 4
-atlas = ExtResource( 8 )
-region = Rect2( 0, 0, 224, 112 )
-
-[sub_resource type="AtlasTexture" id=8]
-flags = 4
-atlas = ExtResource( 48 )
-region = Rect2( 0, 0, 224, 112 )
-
-[sub_resource type="AtlasTexture" id=9]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 224, 112 )
-
-[sub_resource type="AtlasTexture" id=10]
-flags = 4
-atlas = ExtResource( 17 )
-region = Rect2( 0, 0, 224, 112 )
-
-[sub_resource type="AtlasTexture" id=11]
-flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 0, 0, 224, 112 )
-
 [sub_resource type="SpriteFrames" id=34]
 animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
 "loop": false,
 "name": "hit",
 "speed": 7.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 14 ), ExtResource( 41 ), ExtResource( 11 ), ExtResource( 38 ), ExtResource( 36 ), ExtResource( 35 ), ExtResource( 31 ), ExtResource( 34 ), ExtResource( 42 ), ExtResource( 12 ), ExtResource( 30 ), ExtResource( 39 ), ExtResource( 13 ), ExtResource( 43 ), ExtResource( 40 ), ExtResource( 37 ), ExtResource( 29 ) ],
+"loop": false,
+"name": "ultimate",
+"speed": 10.0
 }, {
 "frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
 "loop": true,
@@ -220,16 +230,6 @@ animations = [ {
 "loop": true,
 "name": "jump",
 "speed": 5.0
-}, {
-"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 33 ), ExtResource( 14 ), ExtResource( 41 ), ExtResource( 11 ), ExtResource( 38 ), ExtResource( 36 ), ExtResource( 35 ), ExtResource( 31 ), ExtResource( 34 ), ExtResource( 42 ), ExtResource( 12 ), ExtResource( 30 ), ExtResource( 39 ), ExtResource( 13 ), ExtResource( 43 ), ExtResource( 40 ), ExtResource( 37 ), ExtResource( 29 ) ],
-"loop": false,
-"name": "ultimate",
-"speed": 10.0
 } ]
 
 [node name="WarriorAnimated" type="Node2D"]
@@ -237,5 +237,5 @@ animations = [ {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 34 )
 animation = "idle"
-frame = 8
+frame = 2
 playing = true

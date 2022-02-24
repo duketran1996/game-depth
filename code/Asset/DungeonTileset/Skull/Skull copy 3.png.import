@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Skull copy 3.png-be4bf9b62167d3cdf2382d38ecdb3e66.stex"
+path="res://.import/Skull copy 3.png-c2d5eacb6a53919ed159f29e27b437be.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/DungeonTileset/skull/Skull copy 3.png"
-dest_files=[ "res://.import/Skull copy 3.png-be4bf9b62167d3cdf2382d38ecdb3e66.stex" ]
+source_file="res://Asset/DungeonTileset/Skull/Skull copy 3.png"
+dest_files=[ "res://.import/Skull copy 3.png-c2d5eacb6a53919ed159f29e27b437be.stex" ]
 
 [params]
 
